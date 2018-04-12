@@ -13,13 +13,5 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
 
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('with text', () => (
-    <Button onPress={action('clicked-text')}>
-      <Text>Hello Button</Text>
-    </Button>
-  ))
-  .add('with some emoji', () => (
-    <Button onPress={action('clicked-emoji')}>
-      <Text>😀 😎 👍 💯</Text>
-    </Button>
-  ));
+  .add('with text', () => <Button onPress={action('clicked-text')} title="Hello World" />)
+  .add('with some emoji', () => <Button onPress={action('clicked-emoji')} title="😀 😎 👍 💯" />);
