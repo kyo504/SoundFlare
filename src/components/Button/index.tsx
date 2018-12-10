@@ -2,12 +2,11 @@
  * @flow
  */
 import React, { Component } from 'react';
-import { View, Text, TouchableHighlight, ActivityIndicator, ViewPropTypes } from 'react-native';
-import type { TextProps } from 'react-native/Libraries/Text/TextProps';
+import { View, Text, TouchableHighlight, ActivityIndicator, StyleProp, ViewStyle, TextProps, TextStyle, GestureResponderEvent } from 'react-native';
 
 import styles from './styles';
 
-type Props = {
+interface IProps {
   /**
    * button title (optional)
    */
@@ -15,7 +14,7 @@ type Props = {
   /**
    * add additional styling for title component (optional)
    */
-  titleStyle?: ViewPropTypes.style,
+  titleStyle?: StyleProp<ViewStyle>,
   /**
    * add additional props for Text component (optional)
    */
@@ -23,7 +22,7 @@ type Props = {
   /**
    * add additional styling for button component (optional)
    */
-  buttonStyle: ViewPropTypes.style,
+  buttonStyle: StyleProp<ViewStyle>,
   /**
    * prop to display a loading spinner (optional)
    */
@@ -31,19 +30,19 @@ type Props = {
   /**
    * add additional styling for loading component (optional)
    */
-  loadingStyle?: ViewPropTypes.style,
+  loadingStyle?: StyleProp<ViewStyle>,
   /**
    * add additional props for ActivityIndicator component (optional)
    */
-  loadingProps: { style?: ViewPropTypes.style, color: string, size: 'small' | 'large' | number },
+  loadingProps: { style?: StyleProp<ViewStyle>, color: string, size: 'small' | 'large' | number },
   /**
    * onPress method (optional)
    */
-  onPress: Function,
+  onPress: (event: GestureResponderEvent) => void,
   /**
    * styling for Component container
    */
-  containerStyle?: ViewPropTypes.style,
+  containerStyle?: StyleProp<ViewStyle>,
   /**
    * displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well)
    */
@@ -51,7 +50,7 @@ type Props = {
   /**
    * styling for Icon Component container
    */
-  iconContainerStyle?: ViewPropTypes.style,
+  iconContainerStyle?: StyleProp<ViewStyle>,
   /**
    * displays Icon to the right of title. Needs to be used along with icon prop
    */
@@ -63,14 +62,14 @@ type Props = {
   /**
    * style of the button when disabled
    */
-  disabledStyle?: ViewPropTypes.style,
+  disabledStyle?: StyleProp<ViewStyle>,
   /**
    * style of the title when disabled
    */
-  disabledTitleStyle?: Text.propTypes.style,
+  disabledTitleStyle?: StyleProp<TextStyle>,
 };
 
-class Button extends Component<Props> {
+class Button extends Component<IProps> {
   static defaultProps = {
     title: '',
     iconRight: false,

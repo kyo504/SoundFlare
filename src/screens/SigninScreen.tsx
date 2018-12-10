@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Button, AsyncStorage, StyleSheet } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 
-export default class SignInScreen extends React.Component {
+export default class SignInScreen extends React.Component<NavigationScreenProps> {
   static navigationOptions = {
     title: 'Please sign in',
   };

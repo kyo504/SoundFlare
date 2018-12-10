@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 
-export default class LandingScreen extends React.Component {
+export default class LandingScreen extends React.Component<NavigationScreenProps> {
   static navigationOptions = {
     header: null,
   };

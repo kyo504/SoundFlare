@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, Button, TouchableHighlight } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { NavigationScreenProps } from 'react-navigation';
 
-export default class HomeScreen extends React.Component {
+export default class HomeScreen extends React.Component<NavigationScreenProps> {
   static navigationOptions = ({ navigation }) => {
     return {
       headerTitle: 'Home',

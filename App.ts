@@ -1,3 +1,4 @@
+// @ts-ignore
 import { createAppContainer } from 'react-navigation';
 import AppNavigator from './src/navigators/AppNavigator';
 
