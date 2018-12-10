@@ -1,10 +1,10 @@
-import { SwitchNavigator, StackNavigator } from 'react-navigation';
+import { createSwitchNavigator } from 'react-navigation';
 
 import LoadingScreen from '../screens/LoadingScreen';
 import MainNavigator from './MainNavigator';
 import AuthNavigator from './AuthNavigator';
 
-export default SwitchNavigator(
+export default createSwitchNavigator(
   {
     Loading: LoadingScreen,
     Main: MainNavigator,

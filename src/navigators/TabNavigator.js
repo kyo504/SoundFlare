@@ -1,11 +1,11 @@
-import { TabNavigator } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation';
 
 import HomeScreen from '../screens/HomeScreen';
 import BookmarkScreen from '../screens/BookmarkScreen';
 import NotificationScreen from '../screens/NotificationScreen';
 import UserScreen from '../screens/UserScreen';
 
-export default TabNavigator({
+export default createBottomTabNavigator({
   Home: HomeScreen,
   Bookmark: BookmarkScreen,
   Notification: NotificationScreen,
