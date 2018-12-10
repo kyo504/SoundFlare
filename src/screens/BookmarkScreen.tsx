@@ -1,19 +1,20 @@
 import React from 'react';
+import { NavigationScreenProps } from 'react-navigation';
 import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export default class NotificationScreen extends React.Component {
+export default class BookmarkScreen extends React.Component<NavigationScreenProps> {
   static navigationOptions = {
-    headerTitle: 'Notification',
+    headerTitle: 'Bookmark',
     tabBarIcon: ({ tintColor, focused }) => (
-      <Icon name={focused ? 'bell' : 'bell-outline'} size={26} style={{ color: tintColor }} />
+      <Icon name={focused ? 'bookmark' : 'bookmark-outline'} size={26} style={{ color: tintColor }} />
     ),
   };
 
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>NotificationScreen</Text>
+        <Text>BookmarkScreen</Text>
         <Text
           onPress={() => {
             this.props.navigation.pop();

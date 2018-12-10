@@ -1,7 +1,8 @@
 import React from 'react';
 import { ActivityIndicator, AsyncStorage, StatusBar, StyleSheet, View } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 
-export default class LoadingScreen extends React.Component {
+export default class LoadingScreen extends React.Component<NavigationScreenProps> {
   static navigationOptions = {
     header: null,
   }

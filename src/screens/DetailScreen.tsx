@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 
-export default class DetailScreen extends React.Component {
+export default class DetailScreen extends React.Component<NavigationScreenProps> {
   static navigationOptions = {
     headerTitle: '상세정보',
   };

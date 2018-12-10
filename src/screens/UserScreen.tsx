@@ -1,8 +1,12 @@
 import React from 'react';
 import { View, Text, AsyncStorage, Button } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { NavigationScreenProps, NavigationEventSubscription } from 'react-navigation';
 
-export default class UserScreen extends React.Component {
+export default class UserScreen extends React.Component<NavigationScreenProps> {
+  private willFocusSubscription: NavigationEventSubscription;
+  private willBlurSubscription: NavigationEventSubscription;
+
   static navigationOptions = {
     headerTitle: 'You',
     tabBarIcon: ({ tintColor, focused }) => (
@@ -20,7 +24,7 @@ export default class UserScreen extends React.Component {
   }
 
   componentWillUnount() {
-    this.willFocusSubscription.remvoe();
+    this.willFocusSubscription.remove();
     this.willBlurSubscription.remove();
   }
 
