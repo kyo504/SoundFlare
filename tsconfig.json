@@ -1,5 +1,7 @@
 /**
- * Please refer to https://www.typescriptlang.org/docs/handbook/compiler-options.html
+ * References:
+ * https://www.typescriptlang.org/docs/handbook/compiler-options.html
+ * https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/
 */
 {
   "compilerOptions": {
@@ -7,6 +9,7 @@
     "allowJs": true,
     // Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
     "allowSyntheticDefaultImports": true,
+    // Import non-ES modules as default imports.
     // Emit __importStar and __importDefault helpers for runtime babel ecosystem compatibility
     // and enable --allowSyntheticDefaultImports for typesystem compatibility.
     "esModuleInterop": true,
@@ -16,11 +19,12 @@
     "jsx": "react-native",
     // List of library files to be included in the compilation.
     "lib": ["es6"],
+    // Search under node_modules for non-relative imports.
     // Determine how modules get resolved. Either "Node" for Node.js/io.js style resolution, or "Classic".
     "moduleResolution": "node",
-    // Do not emit outputs.
+    // Don't emit; allow Babel to transform files.
     "noEmit": true,
-    // Enable all strict type checking options. 
+    // Enable strictest settings like strictNullChecks & noImplicitAny.
     "strict": true,
     // Specify ECMAScript target version: "ES3" (default), "ES5", "ES6"/"ES2015", "ES2016", "ES2017" or "ESNext".
     "target": "esnext"
