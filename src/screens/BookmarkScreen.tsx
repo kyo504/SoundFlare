@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 export default class BookmarkScreen extends React.Component<NavigationScreenProps> {
   static navigationOptions = {
     headerTitle: 'Bookmark',
-    tabBarIcon: ({ tintColor, focused }) => (
+    tabBarIcon: ({ tintColor, focused }: { tintColor: string; focused: boolean; horizontal: boolean }): JSX.Element => (
       <Icon name={focused ? 'bookmark' : 'bookmark-outline'} size={26} style={{ color: tintColor }} />
     ),
   };

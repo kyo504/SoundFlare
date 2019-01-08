@@ -4,7 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class SearchScreen extends React.Component {
   static navigationOptions = {
-    tabBarIcon: ({ tintColor, focused }) => (
+    tabBarIcon: ({ tintColor, focused }: { tintColor: string; focused: boolean; horizontal: boolean }): JSX.Element => (
       <Ionicons
         name={focused ? 'ios-settings' : 'ios-settings-outline'}
         size={26}

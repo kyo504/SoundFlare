@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Text, Button, TouchableHighlight } from 'react-native';
+import { View, Text, TouchableHighlight } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { NavigationScreenProps } from 'react-navigation';
+import { NavigationScreenProps, NavigationScreenConfigProps } from 'react-navigation';
 
 export default class HomeScreen extends React.Component<NavigationScreenProps> {
-  static navigationOptions = ({ navigation }) => {
+  static navigationOptions = ({ navigation }: NavigationScreenConfigProps) => {
     return {
       headerTitle: 'Home',
-      tabBarIcon: ({ tintColor, focused }) => (
+      tabBarIcon: ({ tintColor, focused }: { tintColor: string; focused: boolean; horizontal: boolean }): JSX.Element => (
         <Icon name={focused ? 'home' : 'home-outline'} size={26} style={{ color: tintColor }} />
       ),
       headerRight: (
