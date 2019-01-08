@@ -9,17 +9,17 @@
   "dependencies": {
     "react": "16.6.1",
     "react-native": "0.57.7",
-    "react-native-gesture-handler": "1.0.10",
-    "react-native-paper": "2.3.0",
+    "react-native-gesture-handler": "1.0.12",
+    "react-native-paper": "2.4.0",
     "react-native-vector-icons": "6.1.0",
-    "react-navigation": "3.0.7"
+    "react-navigation": "3.0.9"
   },
   "devDependencies": {
     "@types/jest": "23.3.10",
     "@types/react": "16.7.13",
-    "@types/react-native": "0.57.15",
+    "@types/react-native": "0.57.17",
     "@types/react-native-vector-icons": "4.6.4",
-    "@types/react-navigation": "2.13.7",
+    "@types/react-navigation": "3.0.1",
     "@types/react-test-renderer": "16.0.3",
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
