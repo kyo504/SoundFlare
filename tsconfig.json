@@ -18,7 +18,7 @@
     // Support JSX in .tsx files: "React" or "Preserve". See JSX.
     "jsx": "react-native",
     // List of library files to be included in the compilation.
-    "lib": ["es6"],
+    "lib": ["esnext"],
     // Search under node_modules for non-relative imports.
     // Determine how modules get resolved. Either "Node" for Node.js/io.js style resolution, or "Classic".
     "moduleResolution": "node",
@@ -27,7 +27,9 @@
     // Enable strictest settings like strictNullChecks & noImplicitAny.
     "strict": true,
     // Specify ECMAScript target version: "ES3" (default), "ES5", "ES6"/"ES2015", "ES2016", "ES2017" or "ESNext".
-    "target": "esnext"
+    "target": "esnext",
+    // Skip type checking of all declaration files (*.d.ts).
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }
